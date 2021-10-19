@@ -1,6 +1,8 @@
 import 'package:conversor/homepage.dart';
-import 'package:conversor/login_page.dart';
+import 'package:conversor/slide.dart';
 import 'package:flutter/material.dart';
+
+import 'detalhes.dart';
 
 class MyAppWidget extends StatelessWidget {
   const MyAppWidget({Key? key}) : super(key: key);
@@ -12,10 +14,11 @@ class MyAppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.white),
       //home: LoginPage(),
-      initialRoute: '/home',
+      initialRoute: '/slide',
       routes: {
-        '/': (context) => LoginPage(),
+        '/slide': (context) => SlideAnimation(),
         '/home': (context) => HomePage(),
+        '/detalhes': (context) => DetalhesPage()
       },
     );
   }
